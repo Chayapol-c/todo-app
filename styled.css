@@ -96,6 +96,7 @@ body{
     width: 1em;
     height: 1em;
     margin-right: 1.5rem;
+    cursor: pointer;
 }
 
 .dark-circle{
@@ -116,27 +117,49 @@ body{
     color:hsl(236, 9%, 61%);
 }
 
-
-
 .activity-list{
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 1rem 1rem 4rem rgba(0,0,0,0.1);
+    position: relative;
 }
 
 .activity{
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     border-radius: 0;
     color:hsl(235, 19%, 35%);
     border-bottom: 1px solid  hsl(236, 33%, 92%);
 }
 
+.activity p{
+    cursor: pointer;
+}
+
+.activity:hover >.delete-btn{
+    visibility: visible;
+}
+
+.done {
+    color:hsl(236, 33%, 92%);
+    text-decoration: line-through;
+}
+
 .dark-activity{
     border-bottom: 1px solid hsl(235, 19%, 35%);
     color: hsl(236, 9%, 61%);
+}
+
+.delete-btn{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    right: 1.5rem;
+    visibility: hidden;
 }
 
 .option{
@@ -152,13 +175,38 @@ body{
     color:hsl(235, 19%, 35%);
 }
 
-.status{
+.active{
+    color: hsl(220, 98%, 61%);
+}
+
+
+.filter{
     width: 35%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 800;
 }
+
+.filter p {
+    cursor: pointer;
+}
+.filter p:hover{
+    color: hsl(235, 19%, 35%);
+}
+
+.dark-filter p:hover{
+    color: hsl(234, 39%, 85%);
+}
+
+.clear-list{
+    cursor: pointer;
+}
+
+.clear-list:hover{
+    color: hsl(236, 9%, 61%);
+}
+
 
 .reorder{
     margin-top: 3rem;

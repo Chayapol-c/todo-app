@@ -8,7 +8,10 @@ const checks = document.querySelectorAll(".circle")
 const checkSigns = document.querySelectorAll(".check-sign")
 const activities = document.querySelectorAll(".activity")
 const option = document.querySelector(".option")
-
+const allActsBtn = document.querySelector(".all-act") 
+const activeActsBtn = document.querySelector(".active-act")
+const completedActsBtn = document.querySelector(".completed-act")
+const filters = document.querySelectorAll(".filter > p")
 
 console.log(body.style.backgroundColor)
 
@@ -42,4 +45,29 @@ for(let i = 0 ; i < checks.length ; i++){
             checkSigns[i].style.visibility = "hidden"
         }
         checks[i].classList.toggle("check")
+        activities[i-1].classList.toggle("done")
 })}
+
+
+
+const allActivities = () =>{
+    allActsBtn.classList.toggle("active")
+    activeActsBtn.classList.remove("active")
+    completedActsBtn.classList.remove("active")
+}
+
+const activeActivities = () =>{
+    activeActsBtn.classList.toggle("active")
+    allActsBtn.classList.remove("active")
+    completedActsBtn.classList.remove("active")
+}
+
+const completedActivities = () =>{
+    completedActsBtn.classList.toggle("active")
+    activeActsBtn.classList.remove("active")
+    allActsBtn.classList.remove("active")
+}
+
+allActsBtn.addEventListener("click", allActivities)
+activeActsBtn.addEventListener("click", activeActivities)
+completedActsBtn.addEventListener("click", completedActivities)
