@@ -7,14 +7,15 @@ export const TodoForm = () => {
   const [todoList] = useAtom(readTodoListAtom);
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const newSubject = event.target.todo.value;
-    if (!newSubject) return;
+    const inputField = event.currentTarget[0] as HTMLInputElement
+    const text = inputField.value
+    if (!text) return;
     setTodoList({
       id: (todoList.length - 1).toString(),
-      content: newSubject,
+      content: text,
       checked: false,
     });
-    event.target.todo.value = "";
+    inputField.value = "";
   };
   return (
     <form onSubmit={handleSubmit} className="todo-form mb-8">
