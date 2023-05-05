@@ -14,7 +14,7 @@
 
 @layer components {
   .todo-list-section {
-    @apply overflow-hidden rounded-md bg-white shadow-xl;
+    @apply overflow-hidden rounded-md shadow-xl;
     @apply bg-grayish-100 dark:bg-grayish-900;
   }
 

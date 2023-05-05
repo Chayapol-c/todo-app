@@ -20,9 +20,9 @@ function App() {
       <img
         src={isDarkMode ? bgDark : bgLight}
         alt="bg-light"
-        className="fixed left-0 top-0 -z-10 w-full"
+        className="fixed left-0 top-0 -z-10 w-full aspect-auto md:object-contain object-cover h-[225px] md:h-fit"
       />
-      <main className="mx-auto max-w-lg pt-12">
+      <main className="md:mx-auto md:max-w-lg pt-12 px-6">
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-3xl font-bold uppercase tracking-[0.5em] text-white">
             todo

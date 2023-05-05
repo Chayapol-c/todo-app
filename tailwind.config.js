@@ -3,9 +3,6 @@ export default {
   darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    screens: {
-      sm: "375px",
-    },
     extend: {
       colors: {
         primary: "hsl(220, 98%, 61%)",
