@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Josefin Sans", sans-serif;
+    @apply bg-grayish-100 text-[18px];
+    @apply dark:bg-grayish-1000;
+  }
+}
+
+@layer components {
+  .todo-list-section {
+    @apply overflow-hidden rounded-md bg-white shadow-xl;
+    @apply bg-grayish-100 dark:bg-grayish-900;
+  }
+
+  .todo-base {
+    @apply relative flex items-center gap-4 overflow-hidden p-4;
+    @apply bg-grayish-100 dark:bg-grayish-900;
+  }
+
+  .todo-form {
+    @apply todo-base rounded-md;
+    @apply content-text;
+  }
+
+  .todo {
+    @apply todo-base border-b;
+    @apply border-b-grayish-200 dark:border-b-grayish-800;
+  }
+
+  .checkbox-container {
+    @apply relative flex aspect-square h-5 w-5 cursor-pointer items-center justify-center overflow-hidden rounded-full;
+    @apply hover:gradient-marked  border-grayish-300 bg-grayish-200;
+    @apply dark:border-grayish-800 dark:bg-grayish-900;
+  }
+
+  .gradient-marked {
+    @apply bg-gradient-to-tl from-pink-gradient to-blue-gradient;
+  }
+
+  .content-text {
+    @apply text-grayish-700 dark:text-grayish-300;
+  }
+
+  .checked-text {
+    @apply cursor-default text-grayish-200 line-through;
+  }
+
+  .menu-text {
+    @apply select-none text-sm;
+    @apply text-grayish-600 hover:text-grayish-800 dark:text-grayish-600 dark:hover:text-gray-100;
+  }
+}
